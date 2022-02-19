@@ -10,6 +10,7 @@
     "enzyme": "^3.11.0",
     "jest": "^27.5.1",
     "jest-enzyme": "^7.1.2",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -38,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "check-prop-types": "^1.1.2"
   }
 }

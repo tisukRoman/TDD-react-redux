@@ -1,14 +1,15 @@
 /* eslint-disable testing-library/await-async-query */
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import EnzymeAdapter from '@wojtekmaj/enzyme-adapter-react-17';
+import { shallow } from 'enzyme';
 import { findByTestAttr } from './testUtils';
 import Congrats from '../components/Congrats';
 
-Enzyme.configure({ adapter: new EnzymeAdapter() });
+
+const defaultProps = { success: false };
 
 const setup = (props = {}) => {
-    const wrapper = shallow(<Congrats {...props} />);
+    const setupProps = { ...defaultProps, ...props };
+    const wrapper = shallow(<Congrats {...setupProps} />);
     return wrapper;
 }
 
@@ -19,7 +20,7 @@ describe('<Congrats/>', () => {
         expect(congratsComponent.length).toBe(1);
     });
     it('renders no text if "success" prop is false', () => {
-        const wrapper = setup({ success: false });
+        const wrapper = setup();
         const congratsComponent = findByTestAttr(wrapper, "congrats-component");
         expect(congratsComponent.text()).toBe('');
     });
@@ -27,5 +28,5 @@ describe('<Congrats/>', () => {
         const wrapper = setup({ success: true });
         const congratsComponent = findByTestAttr(wrapper, "congrats-component");
         expect(congratsComponent.text()).toBe('Congrats! You have guessed the word!');
-    })
+    });
 })
