@@ -13,11 +13,11 @@ const GuessedWords = ({ guessedWords }) => {
   const guessedWordsTable = () => {
     return (
       <div data-test='guessed-words-table'>
-        <h3 data-test='title'>Guessed words</h3>
+        <h3 data-test='title'>Guessed words:</h3>
         <table className={s.table}>
           <thead>
             <tr className={s.row}>
-              <th>Guessed Words</th>
+              <th>Guessed Word</th>
               <th>Letters match count</th>
             </tr>
           </thead>
