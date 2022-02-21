@@ -1,8 +1,8 @@
 /* eslint-disable testing-library/await-async-query */
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr } from './testUtils';
-import Congrats from '../components/Congrats/Congrats';
+import { findByTestAttr } from '../testUtils';
+import Congrats from '../../components/Congrats/Congrats';
 
 
 const defaultProps = { success: false };

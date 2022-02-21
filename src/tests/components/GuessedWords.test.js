@@ -1,8 +1,8 @@
 /* eslint-disable testing-library/await-async-query */
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr } from './testUtils';
-import GuessedWords from '../components/GuessedWords/GuessedWords';
+import { findByTestAttr } from '../testUtils';
+import GuessedWords from '../../components/GuessedWords/GuessedWords';
 
 const defaultProps = {
     guessedWords: [{ guessedWord: 'train', letterMatchCount: 3 }]

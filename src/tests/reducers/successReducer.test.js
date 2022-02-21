@@ -1,5 +1,5 @@
-import { successReducer } from './sucessReducer';
-import { actionTypes } from '../actions/index';
+import { successReducer } from '../../reducers/sucessReducer';
+import { actionTypes } from '../../actions/index';
 
 describe('successReducer', () => {
     it('returns `false` as a default state', () => {

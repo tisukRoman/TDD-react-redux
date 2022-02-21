@@ -1,5 +1,5 @@
-import { correctGuess } from './index';
-import { actionTypes } from './index';
+import { correctGuess } from '../../actions/index';
+import { actionTypes } from '../../actions/index';
 
 describe('correctGuess action creator', () => {
     it('returns action with type: CORRECT_GUESS', () => {

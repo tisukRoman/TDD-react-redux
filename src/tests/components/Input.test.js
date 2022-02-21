@@ -1,15 +1,18 @@
 /* eslint-disable testing-library/await-async-query */
 import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr } from './testUtils';
-import Input from '../components/Input/Input';
-
-
+import { mount } from 'enzyme';
+import { findByTestAttr, storeFactory } from '../testUtils';
+import Input from '../../components/Input/Input';
+import { Provider } from 'react-redux';
 
 const setup = (initialState = {}) => {
-    return shallow(<Input {...initialState} />);
+    let store = storeFactory({ success: false });
+    return mount(
+        <Provider store={store}>
+            <Input {...initialState} />
+        </Provider>
+    )
 }
-
 
 describe('<Input/>', () => {
     describe('Rendering:', () => {

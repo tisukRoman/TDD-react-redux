@@ -1,4 +1,8 @@
-const Input = ({success}) => {
+import { useSelector } from 'react-redux';
+
+const Input = () => {
+  const success = useSelector((state) => state.success);
+
   return (
     <div data-test='input-component'>
       {!success && (
