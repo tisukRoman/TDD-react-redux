@@ -1,13 +1,16 @@
 import GuessedWords from '../GuessedWords/GuessedWords';
 import Congrats from '../Congrats/Congrats';
 import './App.css';
-import Input from '../Input/Input'
+import Input from '../Input/Input';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const success = useSelector((state) => state.success);
+
   return (
     <div className='App' data-test='app-component'>
       <h1>Jotto</h1>
-      <Congrats success={false} />
+      <Congrats success={success} />
       <Input />
       <GuessedWords
         guessedWords={[
